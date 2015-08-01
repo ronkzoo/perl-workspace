@@ -24,11 +24,11 @@ use utf8;
 use DBI; 
 my @ary = DBI->available_drivers();
 print join("\n", @ary), "\n";
-my $url= "web-messanger.c0sakyriy048.ap-northeast-1.rds.amazonaws.com";
+my $url= "";
 my $dbs= "church";
 my $driver_name = "mysql";
 my $dsn = "DBI:mysql:database=$dbs;host=$url;port=3306";
-my $dbh = DBI->connect($dsn, "sexyuck", "clsmouse00");
+my $dbh = DBI->connect($dsn, "", "");
 my $query = 'show tables;';
 my $sth = $dbh->prepare($query);
 
